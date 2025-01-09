@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Youtube Time Keeper",
+    "description": "Keep the time of your youtube video in the URL, so when you come back at it (after quitting your web browser) you're back where you left off.",
+    "version": "0.1",
+    "icons": {
+        "32": "./img/icon32.png",
+        "128": "./img/icon128.png"
+    },
+    "action": {
+        "default_icon": "./img/icon32.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/*"],
+            "js": ["content-script.js"]
+        }
+    ]
+}
